@@ -5,7 +5,8 @@
 // @description  去除所有网站广告
 // @author       silenceyear
 // @require      https://libs.baidu.com/jquery/1.7.2/jquery.min.js
-// @match        http*://*
+// @match        http://*
+// @match        https://*
 // @grant        none
 // @run-at       document-end
 // ==/UserScript==
