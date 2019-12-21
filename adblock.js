@@ -35,6 +35,8 @@ $(function () {
     console.log(clientCode);
 
     if(typeof fuckAdBlock !== 'undefined' || typeof FuckAdBlock !== 'undefined') {
-
+        $.get('https://raw.githubusercontent.com/silenceyear/tampermonkey-script/master/easylistchina+easylist.txt',function(txt){
+            console.log(txt)
+        });
     }
 })();
