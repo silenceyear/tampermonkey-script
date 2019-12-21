@@ -9,13 +9,13 @@
 // @grant        none
 // @run-at       document-end
 // ==/UserScript==
-var adMatcher = {}
+var adMatcher = {};
 
 adMatcher[/^*$/] = [
     function () {
         console.log('userscript loaded.')
     }
-]
+];
 
 $(function () {
     const url = location.href;
@@ -27,7 +27,7 @@ $(function () {
         } else if ('function'===type) {
             fun();
         }
-    }
+    };
 
     for (const key in adMatcher) {
         if (key.test(url)) {
