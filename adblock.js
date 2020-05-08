@@ -4,7 +4,6 @@
 // @version      0.0.1
 // @description  去除所有网站广告
 // @author       silenceyear
-// @required     https://cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js
 // @grant        none
 // ==/UserScript==
 function loadjscssfile(filename){
