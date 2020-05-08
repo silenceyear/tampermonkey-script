@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         ReadMore
-// @namespace    http://tampermonkey.net/
+// @namespace    https://raw.githubusercontent.com/silenceyear/tampermonkey-script/master/ReadMore.js
 // @version      0.0.1
-// @description  去除所有网站广告
+// @description  阅读更多自动展开
 // @author       silenceyear
 // @grant        none
-// @match *://blog.csdn.net/*/article/details/*
+// @match        *://blog.csdn.net/*/article/details/*
 // ==/UserScript==
 function loadjscssfile(filename) {
     var fileref = document.createElement('script')//创建标签
