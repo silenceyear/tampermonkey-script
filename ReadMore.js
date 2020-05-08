@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         ReadMore
-// @namespace    https://raw.githubusercontent.com/silenceyear/tampermonkey-script/master/ReadMore.js
+// @namespace    https://github.com/silenceyear/tampermonkey-script/blob/master/ReadMore.js
 // @version      0.0.1
 // @description  阅读更多自动展开
 // @author       silenceyear
@@ -20,11 +20,16 @@ if (typeof jQuery == 'undefined') {
 
 $(function () {
     console.log('url match');
+    let userAgent = navigator.userAgent;
     let host = location.host;
-    if (host.indexOf('csdn.net') > -1) {
-        $('a.btn_open_app_prompt_box.read_more_article').click();
-        $('a.app-bt-cance.read_more_btn').click();
-        $('.mask-lock-box.isshow-mask-lock-box').remove();
-        $('.app-open-box .recommend_user_info .flag').remove();
+
+    if(/(iPhone|iPad|iPod|iOS)/i.test(userAgent)||/(Android)/i.test(userAgent)) {
+        if (host.indexOf('csdn.net') > -1) {
+            $('a.btn_open_app_prompt_box.read_more_article').click();
+            $('a.app-bt-cance.read_more_btn').click();
+            $('.mask-lock-box.isshow-mask-lock-box').remove();
+            $('.app-open-box .recommend_user_info .flag').remove();
+        }
     }
+
 })();
